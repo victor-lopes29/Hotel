@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFC609AD-76BA-4380-8870-46BE685CD96C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formulario\Cadastros\CadastroFuncionarioCLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroFuncionarioCLT.Designer.cs">
+      <DependentUpon>CadastroFuncionarioCLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroFuncionarioPJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroFuncionarioPJ.Designer.cs">
+      <DependentUpon>CadastroFuncionarioPJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroPessoaFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroPessoaFisica.Designer.cs">
+      <DependentUpon>CadastroPessoaFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroPessoaJuridica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroPessoaJuridica.Designer.cs">
+      <DependentUpon>CadastroPessoaJuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CadastroQuarto.Designer.cs">
+      <DependentUpon>CadastroQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\ReservaQuartoPJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\ReservaQuartoPJ.Designer.cs">
+      <DependentUpon>ReservaQuartoPJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\ConferirReservaCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\ConferirReservaCheckIn.Designer.cs">
+      <DependentUpon>ConferirReservaCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\ConferirReservaCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\ConferirReservaCheckOut.Designer.cs">
+      <DependentUpon>ConferirReservaCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroFuncionarioPJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroFuncionarioPJ.Designer.cs">
+      <DependentUpon>ExcluirAtualizarCadastroFuncionarioPJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroFuncionarioCLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroFuncionarioCLT.Designer.cs">
+      <DependentUpon>ExcluirAtualizarCadastroFuncionarioCLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroPessoaFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroPessoaFisica.Designer.cs">
+      <DependentUpon>ExcluirAtualizarCadastroPessoaFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroPessoaJuridica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroPessoaJuridica.Designer.cs">
+      <DependentUpon>ExcluirAtualizarCadastroPessoaJuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Excluir_Atualizar\ExcluirAtualizarQuarto.Designer.cs">
+      <DependentUpon>ExcluirAtualizarQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\LoginFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\LoginFuncionario.Designer.cs">
+      <DependentUpon>LoginFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\ReservaQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Cadastros\ReservaQuarto.Designer.cs">
+      <DependentUpon>ReservaQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\VisualisarCadastroHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\VisualisarCadastroHospede.Designer.cs">
+      <DependentUpon>VisualisarCadastroHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\VisualizarCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\VisualizarCadastroFuncionario.Designer.cs">
+      <DependentUpon>VisualizarCadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\VisualizarQuartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Visualizar\VisualizarQuartos.Designer.cs">
+      <DependentUpon>VisualizarQuartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulario\Cadastros\CadastroFuncionarioCLT.resx">
+      <DependentUpon>CadastroFuncionarioCLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\CadastroFuncionarioPJ.resx">
+      <DependentUpon>CadastroFuncionarioPJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\CadastroPessoaFisica.resx">
+      <DependentUpon>CadastroPessoaFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\CadastroPessoaJuridica.resx">
+      <DependentUpon>CadastroPessoaJuridica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\CadastroQuarto.resx">
+      <DependentUpon>CadastroQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\ReservaQuartoPJ.resx">
+      <DependentUpon>ReservaQuartoPJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Visualizar\ConferirReservaCheckIn.resx">
+      <DependentUpon>ConferirReservaCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Visualizar\ConferirReservaCheckOut.resx">
+      <DependentUpon>ConferirReservaCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroFuncionarioCLT.resx">
+      <DependentUpon>ExcluirAtualizarCadastroFuncionarioCLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroFuncionarioPJ.resx">
+      <DependentUpon>ExcluirAtualizarCadastroFuncionarioPJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroPessoaFisica.resx">
+      <DependentUpon>ExcluirAtualizarCadastroPessoaFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Excluir_Atualizar\ExcluirAtualizarCadastroPessoaJuridica.resx">
+      <DependentUpon>ExcluirAtualizarCadastroPessoaJuridica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Excluir_Atualizar\ExcluirAtualizarQuarto.resx">
+      <DependentUpon>ExcluirAtualizarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\LoginFuncionario.resx">
+      <DependentUpon>LoginFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Cadastros\ReservaQuarto.resx">
+      <DependentUpon>ReservaQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Visualizar\VisualisarCadastroHospede.resx">
+      <DependentUpon>VisualisarCadastroHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Visualizar\VisualizarCadastroFuncionario.resx">
+      <DependentUpon>VisualizarCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\Visualizar\VisualizarQuartos.resx">
+      <DependentUpon>VisualizarQuartos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BBL\BLL.csproj">
+      <Project>{7f2636da-e749-4a9a-ae06-d799b69e2fed}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{2aae06a0-ebc5-4978-bab1-3d16fdde866b}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{5cdd5c8f-9707-44a0-9394-e55c40db990c}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
